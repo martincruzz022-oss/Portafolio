@@ -145,3 +145,34 @@ a:hover {
   background-color: var(--color-1);
   color: var(--color-3);
 }
+
+/*  SECCIÓN HERO */
+.hero-img-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  height: 420px;
+}
+
+/* Recuadro contenedor de la imagen */
+.hero-card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+  background-color: var(--color-3) !important;
+  border-color: var(--color-5) !important;
+}
+
+/* Forma  */
+.hero-bg-blob {
+  position: absolute;
+  top: -20px;
+  right: -30px;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-2);
+  border-radius: 50% 60% 70% 30% / 40% 50% 60% 50%;
+  z-index: 1;
+  opacity: 0.8;
+}

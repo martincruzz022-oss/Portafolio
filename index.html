@@ -14,33 +14,78 @@
 
 <body>
     
-    <!-- Navbar de Bootstrap -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
-        <div class="container">
-            <a class="navbar-brand fw-bold" href="#home">&lt;CarlosMartin /&gt;</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">Sobre mí</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">Proyectos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top border-bottom py-3">
+    <div class="container">
+        
+        <a class="navbar-brand fw-bold border border-2 border-dark px-3 py-1 rounded-3" href="#home">CM</a>
+        
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <!-- Sección Hero (Inicio) -->
-    <section id="home" class="vh-100 d-flex align-items-center text-center bg-light">
-        <div class="container">
-            <h1 class="display-3 fw-bold mb-3">Hola, soy <span class="text-primary">Carlos Martin</span></h1>
-            <p class="lead text-secondary mb-4">Desarrollador Web | Creando experiencias digitales increíbles</p>
-            <a href="#projects" class="btn btn-primary btn-lg shadow-sm">Ver mi trabajo</a>
-            <a href="#contact" class="btn btn-outline-dark btn-lg shadow-sm ms-2">Contáctame</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <!-- Enlaces  -->
+            <ul class="navbar-nav mx-auto fw-medium gap-lg-3">
+                <li class="nav-item"><a class="nav-link" href="#home">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">Sobre mí</a></li>
+                <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projects">Proyectos</a></li>
+                <li class="nav-item"><a class="nav-link" href="#experience">Experiencia</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
+            </ul>
+            
+            <a href="assets\CMCM_CV.pdf" download class="btn btn-primary px-4 fw-medium">Descargar CV</a>
         </div>
-    </section>
+    </div>
+</nav>
+
+<!-- Sección Hero  -->
+<section id="home" class="min-vh-100 d-flex flex-column justify-content-center pt-5 position-relative">
+    <div class="container my-auto pt-5">
+        <div class="row align-items-center gy-5">
+            
+            <!-- Columna Izquierda, info mia -->
+            <div class="col-lg-6 text-start">
+                <p class="fs-5 text-secondary fw-semibold mb-2">¡Hola, soy Carlos Martin Cruz Martinez!</p>
+                <h1 class="display-3 fw-bold text-uppercase mb-3 lh-sm">Ing. Sistemas Computacionales</h1>
+                <p class="text-muted mb-4 pe-lg-4 fs-5">
+                    Ingeniero en Sistemas Computacionales con formación como Desarrollador Java Full Stack.     
+                </p>
+                
+                <!-- Botones de Acción -->
+                <div class="d-flex flex-wrap gap-3 mb-4">
+                    <a href="#projects" class="btn btn-primary btn-lg px-4 fs-6">Ver proyectos</a>
+                    <a href="#contact" class="btn btn-outline-dark btn-lg px-4 fs-6">Contactarme</a>
+                </div>
+
+                <!-- Redes Sociales -->
+                <div class="d-flex gap-3 fs-4">
+                    <a href="https://linkedin.com" target="_blank" class="text-dark"><i class="bi bi-linkedin"></i></a>
+                    <a href="https://github.com" target="_blank" class="text-dark"><i class="bi bi-github"></i></a>
+                    <a href="mailto:tu-correo@ejemplo.com" class="text-dark"><i class="bi bi-envelope"></i></a>
+                </div>
+            </div>
+
+            <!-- Columna Derecha: Tarjeta de Foto con Fondo  -->
+            <div class="col-lg-6 text-center position-relative">
+                <div class="hero-img-wrapper mx-auto">
+                    <div class="hero-bg-blob"></div>
+                    <div class="hero-card shadow-sm border rounded-4 bg-light overflow-hidden">
+                            <img src="assets\Foto_CMCM.jpeg" alt="mi foto" class="w-100 h-100 object-fit-cover">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Botón hacia abajo para hacer scroll -->
+    <div class="text-center pb-3">
+        <a href="#about" class="btn btn-outline-dark rounded-circle p-2 border-2">
+            <i class="bi bi-arrow-down d-block fs-5"></i>
+        </a>
+    </div>
+</section>
 
     <!-- Sección Sobre Mí -->
     <section id="about" class="py-5">
@@ -48,7 +93,7 @@
             <h2 class="text-center fw-bold mb-4">Sobre mí</h2>
             <div class="row justify-content-center">
                 <div class="col-md-8 text-center text-muted">
-                    <p class="fs-5">Soy un desarrollador web apasionado por construir aplicaciones rápidas, accesibles y con un diseño atractivo. Me encanta aprender nuevas tecnologías y resolver problemas complejos mediante código limpio.</p>
+                    <p class="fs-5">Ingeniero en Sistemas Computacionales con formación como Desarrollador Java Full Stack.</p>
                 </div>
             </div>
         </div>
