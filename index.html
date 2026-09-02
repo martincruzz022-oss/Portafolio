@@ -186,35 +186,98 @@
   </div>
 </section>
 
-    <!-- Sección Proyectos -->
-    <section id="projects" class="py-5 bg-light">
-        <div class="container py-5">
-            <h2 class="text-center fw-bold mb-5">Mis Proyectos</h2>
-            <div class="row g-4">
+<!--  PROYECTOS -->
+<section id="projects" class="py-5 bg-light mt-5">
+  <div class="container">
 
-                <!-- Tarjeta de Proyecto 1 -->
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm border-0">
-                        <!-- <img src="ruta-imagen.jpg" class="card-img-top" alt="Proyecto 1"> -->
-                        <div class="card-body">
-                            <h5 class="card-title fw-bold">Proyecto 1</h5>
-                            <p class="card-text text-muted">Breve descripción de lo que hace este proyecto y el problema que resuelve.</p>
-                            <div class="mb-3">
-                                <span class="badge bg-secondary">HTML</span>
-                                <span class="badge bg-secondary">CSS</span>
-                                <span class="badge bg-secondary">Bootstrap</span>
-                            </div>
-                        </div>
-                        <div class="card-footer bg-white border-0 pb-3">
-                            <a href="#" class="btn btn-sm btn-outline-primary">Ver Demo</a>
-                            <a href="#" class="btn btn-sm btn-outline-dark">Código (GitHub)</a>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
+    <div class="section-title">
+      <div class="section-line"></div>
+      <h2>Proyectos destacados</h2>
+    </div>
+
+    <div class="projects-grid">
+
+      <!-- Proyecto 1: YeckFun -->
+      <article class="project">
+        <div class="project-image">
+          <img src="assets\YeckFun.png" alt="YeckFun" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
         </div>
-    </section>
+
+        <div class="project-content">
+          <h3>YeckFun — Eventos Infantiles</h3>
+          <p>
+            Aplicación para centralizar la gestión de eventos! con Next.js, React y FastAPI. Integración con Gemini Vision y OpenWeatherMap para alertas de riesgo.
+          </p>
+
+          <div class="project-badges">
+            <span class="badge">Next.js</span>
+            <span class="badge">React</span>
+            <span class="badge">FastAPI</span>
+            <span class="badge">Python</span>
+            <span class="badge">Gemini AI</span>
+          </div>
+
+          <div class="project-links">
+            <a href="https://yeck-fun.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Ver Demo</a>
+            <a href="https://github.com/yeckfunproyecto-boop/YeckFun.git" target="_blank" rel="noopener noreferrer" class="btn btn-outline-dark">GitHub</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Proyecto 2: Pastelería Keso -->
+      <article class="project">
+        <div class="project-image">
+          <img src="assets\KesoPasteleria.png" alt="Pastelería Keso" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        </div>
+
+        <div class="project-content">
+          <h3>E-commerce Pastelería Keso</h3>
+          <p>
+            Plataforma web de comercio y gestión integral para pastelería (control de pasteles, ventas, entregas y alcance publicitario).
+          </p>
+
+          <div class="project-badges">
+            <span class="badge">JavaScript</span>
+            <span class="badge">HTML</span>
+            <span class="badge">CSS</span>
+            <span class="badge">Bootstrap</span>
+            <span class="badge">SQL</span>
+          </div>
+
+          <div class="project-links">
+            <a href="https://github.com/aggressxve/keso-javahots.git" target="_blank" rel="noopener noreferrer" class="btn btn-outline-dark">GitHub</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Proyecto 3 -->
+      <article class="project">
+        <div class="project-image">
+          <div class="project-image-fallback">...</div>
+        </div>
+
+        <div class="project-content">
+          <h3>Proyecto 03</h3>
+          <p>
+             un nuevo desarrollo despues.
+          </p>
+
+          <div class="project-badges">
+            <span class="badge">Java</span>
+            <span class="badge">Spring Boot</span>
+            <span class="badge">Docker</span>
+          </div>
+
+          <div class="project-links">
+            <span class="coming-soon">En desarrollo...</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+  </div>
+</section>
     
 
     <!-- Sección Contacto -->
