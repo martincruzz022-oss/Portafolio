@@ -1,0 +1,147 @@
+/* Importación de fuentes desde Google Fonts */
+@import url('https://googleapis.com');
+
+:root {
+  --color-1: #4B5628; 
+  --color-2: #91996B; 
+  --color-3: #FBFAF7; 
+  --color-4: #1D1D1C; 
+  --color-5: #C6C5C3; 
+  --color-6: #D8DCCF; 
+
+  --border-radius: 12px;
+  --transition-speed: 0.3s;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-3);
+  color: var(--color-4);
+  font-family: 'Lora', Georgia, serif; 
+  font-size: 1.5rem; 
+  letter-spacing: 0.01em;
+  line-height: 1.7;
+}
+
+/* Títulos principales y componentes de Bootstrap imponentes */
+h1, h2, h3, h4, h5, h6, 
+.navbar-brand, 
+.display-1, .display-2, .display-3, .display-4, .display-5, .display-6 {
+  font-family: 'Chonuri', serif;
+  color: var(--color-1) !important; 
+  font-weight: 700;
+  letter-spacing: -0.04em; 
+}
+
+.navbar {
+  font-size: 0.95rem; 
+}
+
+.navbar-nav .nav-link {
+  font-family: 'Lora', serif;
+  font-weight: 500;
+  letter-spacing: 0.05em; 
+}
+
+
+h1, .h1 { font-size: 3rem; }
+h2, .h2 { font-size: 2.25rem; }
+
+.lead, blockquote, p i {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  color: var(--color-2);
+}
+
+/* Fondos: Navbar, Footer, etc. */
+.bg-dark {
+  background-color: var(--color-1) !important;
+}
+
+.bg-dark .navbar-brand, 
+.bg-dark .nav-link {
+  color: var(--color-3) !important;
+}
+
+/* Fondos claros: Secciones alternativas */
+.bg-light {
+  background-color: var(--color-3) !important;
+}
+
+/* Fondo de apoyo (Sage) */
+.bg-sage {
+  background-color: var(--color-6) !important;
+}
+
+/* Texto secundario */
+.text-muted,
+.text-secondary {
+  color: var(--color-2) !important;
+  opacity: 1;
+}
+
+/* Texto destacado */
+.text-primary {
+  color: var(--color-1) !important;
+}
+
+/* Botón principal  */
+.btn-primary {
+  background-color: var(--color-1);
+  border-color: var(--color-1);
+  color: var(--color-3); 
+  font-family: 'Lora', serif;
+  font-weight: 600;
+  border-radius: var(--border-radius);
+  padding: 0.6rem 1.5rem; 
+  transition: all var(--transition-speed) ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-4);
+  border-color: var(--color-4);
+  color: var(--color-3);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(75, 86, 40, 0.25);
+}
+
+/* Botones secundarios / outline */
+.btn-outline-dark {
+  color: var(--color-1);
+  border-color: var(--color-1);
+  font-family: 'Lora', serif;
+  font-weight: 600;
+  border-radius: var(--border-radius);
+  transition: all var(--transition-speed) ease;
+}
+
+.btn-outline-dark:hover {
+  background-color: var(--color-1);
+  border-color: var(--color-1);
+  color: var(--color-3);
+  transform: translateY(-2px);
+}
+
+/* Bordes */
+.border {
+  border-color: var(--color-5) !important;
+}
+
+/* Enlaces */
+a {
+  color: var(--color-1);
+  transition: color var(--transition-speed) ease;
+  text-decoration-thickness: 2px; 
+}
+
+a:hover {
+  color: var(--color-2);
+}
+
+::selection {
+  background-color: var(--color-1);
+  color: var(--color-3);
+}
