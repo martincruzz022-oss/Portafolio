@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carlos Martin | Desarrollador Web</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" 
+            rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" 
+            crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+    
+    <!-- Navbar de Bootstrap (Fija en la parte superior) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#home">&lt;CarlosMartin /&gt;</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">Sobre mí</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Proyectos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección Hero (Inicio) -->
+    <section id="home" class="vh-100 d-flex align-items-center text-center bg-light">
+        <div class="container">
+            <h1 class="display-3 fw-bold mb-3">Hola, soy <span class="text-primary">Carlos Martin</span></h1>
+            <p class="lead text-secondary mb-4">Desarrollador Web | Creando experiencias digitales increíbles</p>
+            <a href="#projects" class="btn btn-primary btn-lg shadow-sm">Ver mi trabajo</a>
+            <a href="#contact" class="btn btn-outline-dark btn-lg shadow-sm ms-2">Contáctame</a>
+        </div>
+    </section>
+
+    <!-- Sección Sobre Mí -->
+    <section id="about" class="py-5">
+        <div class="container py-5">
+            <h2 class="text-center fw-bold mb-4">Sobre mí</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8 text-center text-muted">
+                    <p class="fs-5">Soy un desarrollador web apasionado por construir aplicaciones rápidas, accesibles y con un diseño atractivo. Me encanta aprender nuevas tecnologías y resolver problemas complejos mediante código limpio.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Proyectos -->
+    <section id="projects" class="py-5 bg-light">
+        <div class="container py-5">
+            <h2 class="text-center fw-bold mb-5">Mis Proyectos</h2>
+            <div class="row g-4">
+                <!-- Tarjeta de Proyecto 1 -->
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <!-- <img src="ruta-imagen.jpg" class="card-img-top" alt="Proyecto 1"> -->
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Proyecto 1</h5>
+                            <p class="card-text text-muted">Breve descripción de lo que hace este proyecto y el problema que resuelve.</p>
+                            <div class="mb-3">
+                                <span class="badge bg-secondary">HTML</span>
+                                <span class="badge bg-secondary">CSS</span>
+                                <span class="badge bg-secondary">Bootstrap</span>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-white border-0 pb-3">
+                            <a href="#" class="btn btn-sm btn-outline-primary">Ver Demo</a>
+                            <a href="#" class="btn btn-sm btn-outline-dark">Código (GitHub)</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Puedes copiar el bloque de arriba para agregar más proyectos -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Contacto -->
+    <section id="contact" class="py-5 text-white bg-dark">
+        <div class="container py-5 text-center">
+            <h2 class="fw-bold mb-4">¿Trabajamos juntos?</h2>
+            <p class="lead mb-4">Estoy disponible para nuevos proyectos y oportunidades laborales.</p>
+            <a href="mailto:tu-correo@ejemplo.com" class="btn btn-primary btn-lg">Envíame un correo</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3 border-top border-secondary">
+        <p class="mb-0">&copy; 2024 Carlos Martin. Todos los derechos reservados.</p>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+
+</html>
