@@ -576,3 +576,76 @@ footer {
   font-size: 11px;
   opacity: 0.85;
 }
+
+
+/* ==========================================
+   Estilos Navbar / Site Header
+   ========================================== */
+.site-header {
+  background-color: rgba(251, 250, 247, 0.9);
+  border-bottom: 1px solid var(--color-5);
+  backdrop-filter: blur(8px);
+}
+
+.brand-stamp {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--color-4);
+  border: 2px solid var(--color-4);
+  padding: 2px 10px;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.brand-stamp:hover {
+  background-color: var(--color-4);
+  color: var(--color-3) !important;
+}
+
+.nav-menu a {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--color-4);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+  color: var(--color-1);
+}
+
+.btn-editorial-dark {
+  background-color: var(--color-1);
+  color: var(--color-3) !important;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 8px 18px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-editorial-dark:hover {
+  background-color: var(--color-4);
+  color: var(--color-3) !important;
+  transform: translateY(-1px);
+}
+
+/* Menu  Movil */
+.nav-menu-mobile a {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--color-4);
+  text-decoration: none;
+}
+
+.nav-menu-mobile a:hover {
+  color: var(--color-1);
+}
