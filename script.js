@@ -58,3 +58,11 @@ if (heroSection) {
         });
     });
 }
+
+//  animacion Skills //
+const skillsSection = document.querySelector('#skills');
+
+if (skillsSection) {
+    // Usamos el aboutObserver que ya creamos en el paso anterior
+    aboutObserver.observe(skillsSection);
+}
