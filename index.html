@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
 
     <title>Carlos Martín | Desarrollador</title>
 
@@ -28,11 +29,11 @@
 </head>
 
 <body>
+
     
 <!-- Navbar -->
 <header class="site-header sticky-top py-3">
-    <div class="container d-flex align-items-center justify-content-between flex-wrap">
-        <!-- Logo / Sello -->
+    <div class="container position-relative d-flex align-items-center justify-content-between flex-wrap">
         <a href="#home" class="brand-stamp">CM</a>
 
         <!-- Menú Desktop -->
@@ -41,7 +42,6 @@
             <a href="#about">SOBRE MÍ</a>
             <a href="#skills">SKILLS</a>
             <a href="#projects">PROYECTOS</a>
-            <a href="#experience">EXPERIENCIA</a>
             <a href="#contact">CONTACTO</a>
         </nav>
 
@@ -55,16 +55,15 @@
             <i class="bi bi-list"></i>
         </button>
 
-        <!-- Desplegable Móvil -->
-        <div class="collapse w-100 d-md-none pt-3" id="mobileNav">
-            <nav class="nav-menu-mobile d-flex flex-column gap-3 align-items-center py-3 border-top mt-2">
-                <a href="#home">INICIO</a>
-                <a href="#about">SOBRE MÍ</a>
-                <a href="#skills">SKILLS</a>
-                <a href="#projects">PROYECTOS</a>
-                <a href="#experience">EXPERIENCIA</a>
-                <a href="#contact">CONTACTO</a>
-                <a href="assets/CMCM_CV.pdf" download class="btn-editorial-dark w-100 text-center mt-2">
+        <!-- Desplegable Móvil  -->
+        <div class="collapse w-100 d-md-none" id="mobileNav">
+            <nav class="nav-menu-mobile d-flex flex-column gap-3 align-items-center py-4 mt-3">
+                <a href="#home" class="mobile-link">INICIO</a>
+                <a href="#about" class="mobile-link">SOBRE MÍ</a>
+                <a href="#skills" class="mobile-link">SKILLS</a>
+                <a href="#projects" class="mobile-link">PROYECTOS</a>
+                <a href="#contact" class="mobile-link">CONTACTO</a>
+                <a href="assets/CMCM_CV.pdf" download class="btn-editorial-dark w-100 text-center mt-3">
                     Descargar CV <i class="bi bi-arrow-right ms-2"></i>
                 </a>
             </nav>
@@ -72,13 +71,19 @@
     </div>
 </header>
 
+
 <!-- Sección Hero -->
 <section id="home" class="hero-section py-5">
     <div class="container">
         <div class="row align-items-center gy-5">
 
             <!-- Columna Izquierda: Información -->
+             
             <div class="col-lg-6">
+              <div class="section-number mb-2">
+                    <span class="num">01</span>
+                    <span class="line"></span>
+              </div>
                 <span class="hero-subtitle d-inline-block mb-2">
                     // INGENIERO EN SISTEMAS COMPUTACIONALES
                 </span>
@@ -120,10 +125,8 @@
                         >
                         <i class="bi bi-linkedin"></i>
                     </a>
-                    <a
-                        href="mailto:martin_crmtz@outlook.com"
-                        aria-label="Correo electrónico"
-                    >
+                    <a href="mailto:martin_crmtz@outlook.com"
+                        aria-label="Correo electrónico">
                         <i class="bi bi-envelope"></i>
                     </a>
                 </div>
@@ -178,45 +181,64 @@
     </div>
 </section>
 
- <!--  ABOUT  -->
-<section id="about">
-  <div class="container">
-    <div class="section-title">
-      <div class="section-line"></div>
-      <h2>Sobre mí</h2>
-    </div>
+<!-- ================= ABOUT ================= -->
+<section id="about" class="about-section py-5">
+    <div class="container">
+        <div class="row align-items-center gy-5">
 
-    <div class="about">
-      <div class="about-image">
-        <img src="assets/decora.jpeg" alt="mi foto" />
-      </div>
+            <!-- Columna Izquierda -->
+            <div class="col-lg-6">
+                <div class="section-number mb-2">
+                    <span class="num">02</span>
+                    <span class="line"></span>
+                </div>
+                <h2 class="section-title mb-3">Sobre mí</h2>
 
-      <div class="about-text">
-        <p>
-          Soy <strong>Ingeniero en Sistemas Computacionales</strong> Mi experiencia va desde la construcción de aplicaciones web, desarrollo con Python, hasta la automatización de procesos críticos y la gestión de infraestructura de datos en entornos Big Data.
-        </p>
+                <p class="about-text mb-3 pe-lg-3">
+                    La tecnología cambia constantemente y me gusta <strong>mantenerme al día, aprender nuevas herramientas</strong> 
+                    y entender cómo pueden relacionarse entre sí. Me interesa encontrar formas de <strong>hacer más sencillas las actividades 
+                    de un área</strong>, desde automatizar tareas hasta conectar y orquestar distintos procesos.
+                </p>
 
-        <p>
-          Me interesa el desarrollo de herramientas funcionales que resuelvan problemas operativos reales. Por ello, combino la lógica del backend (Java, Python, SQL) con interfaces limpias construidas en Bootstrap o Next.js, asegurando que cada solución sea escalable, estable y fácil de usar.
-        </p>
+                <p class="about-text mb-3 pe-lg-3">
+                    Mi formación me ha llevado por distintos caminos, desde el <strong>desarrollo de aplicaciones</strong> hasta el trabajo con <strong>datos y automatización</strong>. Disfruto aprender algo nuevo, ponerlo en práctica y ver cómo una idea va tomando forma durante un proyecto.
+                </p>
 
-        <div class="about-highlights">
-          <div class="highlight-item">
-            <span class="highlight-title">Especialidad</span>
-            <span class="highlight-desc">Desarrollo Java & Web Full Stack</span>
-          </div>
-          <div class="highlight-item">
-            <span class="highlight-title">Ubicación</span>
-            <span class="highlight-desc">Estado de México (disponibilidad de reubicación)</span>
-          </div>
+                <p class="about-text mb-4 pe-lg-3">
+                    Este portafolio reúne algunos de esos <strong>proyectos, aprendizajes y experiencias</strong> que he ido construyendo en el camino.
+                </p>
+
+                <a href="assets/CMCM_CV__.pdf" target="_blank" rel="noopener noreferrer" class="btn-editorial-dark mb-4">
+                    Ver CV en PDF
+                    <i class="bi bi-file-earmark-pdf ms-2"></i>
+                </a>
+
+                <div class="about-meta">
+                    SISTEMAS · DESARROLLO · DATOS · AUTOMATIZACIÓN
+                </div>
+            </div>
+
+            <!-- Columna Derecha: Polaroid y Post-it -->
+            <div class="col-lg-6">
+                <div class="about-frame-wrapper">
+                    <div class="about-decoration"></div>
+                    <div class="about-polaroid">
+                        <div class="tape tape-top-center"></div>
+                        <div class="about-photo">
+                            <img src="assets/tecno.jpg" alt="Carlos Martín">
+                        </div>
+                    </div>
+
+                    <div class="about-sticky-note">
+                        <p class="sticky-text">
+                            “La única constante es el cambio”. — Heráclito
+                        </p>
+                    </div>
+                </div>
+            </div>
+
         </div>
-
-        <a href="assets/CMCM_CV.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-          Ver CV en PDF
-        </a>
-      </div>
     </div>
-  </div>
 </section>
 
 
@@ -287,7 +309,7 @@
       <!-- Proyecto 1: YeckFun -->
       <article class="project">
         <div class="project-image">
-          <img src="assets\YeckFun.png" alt="YeckFun" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <img src="assets/YeckFun.png" alt="YeckFun" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
         </div>
 
         <div class="project-content">
@@ -314,7 +336,7 @@
       <!-- Proyecto 2: Pastelería Keso -->
       <article class="project">
         <div class="project-image">
-          <img src="assets\KesoPasteleria.png" alt="Pastelería Keso" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <img src="assets/KesoPasteleria.png" alt="Pastelería Keso" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
         </div>
 
         <div class="project-content">
