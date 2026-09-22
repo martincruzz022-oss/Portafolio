@@ -242,3 +242,69 @@ if (experienceSection) {
 
     experienceObserver.observe(experienceSection);
 }
+
+
+/* formulario contacto */
+
+const contactForm = document.getElementById('contact-form');
+
+if (contactForm) {
+    const submitButton = document.getElementById('contact-submit');
+    const statusMessage = document.getElementById('form-status');
+
+    contactForm.addEventListener('submit', async (event) => {
+        event.preventDefault();
+
+        const originalButton = submitButton.innerHTML;
+
+        statusMessage.textContent = '';
+        statusMessage.className = 'form-status';
+
+        submitButton.disabled = true;
+        submitButton.innerHTML = `
+            <i class="bi bi-arrow-repeat"></i>
+            <span>Enviando...</span>
+        `;
+
+        try {
+            const response = await fetch(contactForm.action, {
+                method: 'POST',
+                body: new FormData(contactForm),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            if (response.ok) {
+                contactForm.reset();
+
+                statusMessage.textContent =
+                    '✓ Mensaje enviado correctamente. Gracias por escribirme.';
+
+                statusMessage.classList.add('success');
+
+                submitButton.innerHTML = `
+                    <i class="bi bi-check-square"></i>
+                    <span>Mensaje enviado</span>
+                `;
+
+                setTimeout(() => {
+                    submitButton.disabled = false;
+                    submitButton.innerHTML = originalButton;
+                }, 3000);
+
+            } else {
+                throw new Error('Error al enviar el formulario.');
+            }
+
+        } catch (error) {
+            statusMessage.textContent =
+                'No se pudo enviar el mensaje. Inténtalo nuevamente.';
+
+            statusMessage.classList.add('error');
+
+            submitButton.disabled = false;
+            submitButton.innerHTML = originalButton;
+        }
+    });
+}

@@ -42,8 +42,9 @@
             <a href="#about">SOBRE MÍ</a>
             <a href="#skills">SKILLS</a>
             <a href="#projects">PROYECTOS</a>
-            <a href="#contact">CONTACTO</a>
             <a href="#experience">EXPERIENCIA</a>
+            <a href="#contact">CONTACTO</a>
+            
             
         </nav>
         <!-- Botón CV Desktop -->
@@ -63,9 +64,10 @@
                 <a href="#about" class="mobile-link">SOBRE MÍ</a>
                 <a href="#skills" class="mobile-link">SKILLS</a>
                 <a href="#projects" class="mobile-link">PROYECTOS</a>
-                <a href="#contact" class="mobile-link">CONTACTO</a>
                 <a href="#experience" class="mobile-link">EXPERIENCIA</a>
               
+                <a href="#contact" class="mobile-link">CONTACTO</a>
+                
                 <a href="assets/CMCM_CV.pdf" download class="btn-editorial-dark w-100 text-center mt-3">
                     Descargar CV <i class="bi bi-arrow-right ms-2"></i>
                 </a>
@@ -602,61 +604,132 @@
 </section>
 
 <!--  CONTACTO  -->
-<section id="contact" class="py-5 mt-5">
-  <div class="container">
-    <div class="contact">
-      
-      <div class="contact-info">
-        <h2>¿Trabajamos juntos?</h2>
-        <p>
-          Estoy disponible para nuevas oportunidades laborales, desarrollo de proyectos y colaboraciones. Ponte en contacto conmigo directamente:
-        </p>
+<section id="contact" class="contact-section">
+    <div class="container">
+        <div class="contact-dossier">
 
-        <div class="contact-details">
-          <a href="mailto:martin_crmtz@outlook.com" class="contact-item">
-            <span class="contact-icon">✉</span>
-            <div>
-              <span class="contact-label">Correo</span>
-              <span class="contact-value">martin_crmtz@outlook.com</span>
-            </div>
-          </a>
+            <div class="dossier-intro">
 
-          <a href="tel:+525551494016" class="contact-item">
-            <span class="contact-icon">📱</span>
-            <div>
-              <span class="contact-label">Teléfono / WhatsApp</span>
-              <span class="contact-value">+52 555 149 4016</span>
+              <div class="section-number mb-2">
+                <span class="num">06</span>
+                <span class="line"></span>
+              </div>
+                <h2>¿Hablemos?</h2>
+                <p> Estoy disponible para nuevas oportunidades laborales, desarrollo de proyectos y colaboraciones. Ponte en contacto conmigo directamente:</p>
             </div>
-          </a>
 
-          <a href="https://www.linkedin.com/in/carlos-martin-cruz" target="_blank" rel="noopener noreferrer" class="contact-item">
-            <span class="contact-icon">💼</span>
-            <div>
-              <span class="contact-label">LinkedIn</span>
-              <span class="contact-value">carlos-martin-cruz</span>
-            </div>
-          </a>
+            <div class="dossier-links">
+                <!-- Correo -->
+                <a href="mailto:martin_crmtz@outlook.com"
+                    class="d-link">
+                    <i class="bi bi-envelope"></i>
+                    <span>martin_crmtz@outlook.com</span>
+                </a>
 
-          <a href="https://github.com/martincruzz022-oss" target="_blank" rel="noopener noreferrer" class="contact-item">
-            <span class="contact-icon">💻</span>
-            <div>
-              <span class="contact-label">GitHub</span>
-              <span class="contact-value">martincruzz022-oss</span>
+
+                <!-- WhatsApp -->
+                <a href="https://wa.me/525551494016"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="d-link"
+                >
+                    <i class="bi bi-whatsapp"></i>
+                    <span>+52 555 149 4016</span>
+                </a>
+
+
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/carlos-martin-cruz"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="d-link">
+                    <i class="bi bi-linkedin"></i>
+                    <span>carlos-martin-cruz</span>
+                </a>
+
+
+                <!-- GitHub -->
+                <a href="https://github.com/martincruzz022-oss"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="d-link">
+                    <i class="bi bi-github"></i>
+                    <span>martincruzz022-oss</span>
+                </a>
             </div>
-          </a>
+
+            <div class="dossier-form-container">
+            <form
+                id="contact-form"
+                action="https://formspree.io/f/xljdbyzg"
+                method="POST"
+                class="dossier-form">
+                <!-- Nombre + correo -->
+                <div class="form-row-custom">
+                    <input
+                        type="text"
+                        name="nombre"
+                        placeholder="Nombre"
+                        autocomplete="name"
+                        required>
+
+                    <input
+                        type="email"
+                        name="correo"
+                        placeholder="Correo electrónico"
+                        autocomplete="email"
+                        required>
+                </div>
+
+                <!-- Asunto -->
+                <input
+                    type="text"
+                    name="asunto"
+                    placeholder="Asunto">
+
+                <!-- Mensaje -->
+                <textarea
+                    name="mensaje"
+                    placeholder="Mensaje"
+                    rows="2"
+                    required>
+                </textarea>
+
+                <!-- Estado del formulario -->
+                <div
+                    id="form-status"
+                    class="form-status"
+                    role="status"
+                    aria-live="polite">
+                </div>
+
+                <!-- Botón -->
+                <div class="form-submit">
+                    <button
+                        type="submit"
+                        class="btn-dossier"
+                        id="contact-submit">
+                        <i class="bi bi-check-square"></i>
+                        <span>Enviar mensaje</span>
+                        <i class="bi bi-arrow-right"></i>
+                    </button>
+                </div>
+            </form>
+
+            </div>
+
+            <div class="dossier-photo">
+                <img
+                    src="assets/decorac.png"
+                    alt="Escritorio con documentos y elementos tecnológicos"
+                    loading="lazy">
+                <div class="dossier-note">
+                    <span>Buenas ideas,</span>
+                    <span>mejores soluciones.</span>
+                </div>
+            </div>
         </div>
-      </div>
-
-      <div class="contact-action">
-        <h3>Envíame un mensaje</h3>
-        <p>¿Tienes una propuesta o consulta? Puedes redactar tu correo directamente.</p>
-        <a href="mailto:martin_crmtz@outlook.com" class="btn btn-primary">
-          Enviar correo directo →
-        </a>
-      </div>
-
     </div>
-  </div>
 </section>
 
 <!--  FOOTER  -->
