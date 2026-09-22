@@ -219,3 +219,26 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     setTimeout(setupDots, 150);
 });
+
+//animacion experiencia //
+
+const experienceSection = document.querySelector('#experience');
+
+if (experienceSection) {
+
+    const experienceObserver = new IntersectionObserver((entries) => {
+
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                experienceSection.classList.add('is-visible');
+                experienceObserver.unobserve(experienceSection);
+            }
+
+        });
+
+    }, {
+        threshold: 0.15
+    });
+
+    experienceObserver.observe(experienceSection);
+}
