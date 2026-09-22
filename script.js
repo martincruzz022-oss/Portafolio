@@ -66,15 +66,13 @@ if (skillsSection) {
     aboutObserver.observe(skillsSection);
 }
 
-// ================= ANIMACIÓN DE APARICIÓN DE LA SECCIÓN PROYECTOS ================= //
+// animacion Proyectos //
 
 const projectsSection = document.querySelector('#projects');
 
 if (projectsSection && typeof aboutObserver !== 'undefined') {
     aboutObserver.observe(projectsSection);
 }
-
-// ================= CONTROL DEL CARRUSEL Y PUNTOS EXACTOS ================= //
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -88,7 +86,6 @@ document.addEventListener("DOMContentLoaded", () => {
     let dots = [];
     let scrollPositions = [];
 
-    // Calcula las posiciones reales de cada tarjeta
     const getScrollPositions = () => {
         const cards = Array.from(track.querySelectorAll('.project'));
 
@@ -105,20 +102,15 @@ document.addEventListener("DOMContentLoaded", () => {
         return [...new Set(positions)];
     };
 
-    // Crea los puntos según las posiciones reales del carrusel
     const setupDots = () => {
 
         if (!indicatorsContainer) return;
-
         scrollPositions = getScrollPositions();
-
         indicatorsContainer.innerHTML = '';
         dots = [];
-
         scrollPositions.forEach((position, index) => {
 
             const dot = document.createElement('button');
-
             dot.classList.add('dot');
             dot.type = 'button';
             dot.setAttribute('aria-label', `Ir al proyecto ${index + 1}`);
@@ -142,18 +134,15 @@ document.addEventListener("DOMContentLoaded", () => {
         updateDots();
     };
 
-    // Actualiza el punto activo según la posición real
     const updateDots = () => {
 
         if (dots.length === 0 || scrollPositions.length === 0) return;
 
         const currentScroll = track.scrollLeft;
-
         let activeIndex = 0;
         let smallestDifference = Infinity;
 
         scrollPositions.forEach((position, index) => {
-
             const difference = Math.abs(currentScroll - position);
 
             if (difference < smallestDifference) {
@@ -165,7 +154,6 @@ document.addEventListener("DOMContentLoaded", () => {
         dots.forEach((dot, index) => {
 
             const isActive = index === activeIndex;
-
             dot.classList.toggle('active', isActive);
 
             if (isActive) {
@@ -176,13 +164,11 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     };
 
-    // Busca la siguiente posición disponible
     const goNext = () => {
 
         if (scrollPositions.length === 0) return;
 
         const currentScroll = track.scrollLeft;
-
         const nextPosition = scrollPositions.find(
             position => position > currentScroll + 5
         );
@@ -195,13 +181,11 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 
-    // Busca la posición anterior disponible
     const goPrevious = () => {
 
         if (scrollPositions.length === 0) return;
 
         const currentScroll = track.scrollLeft;
-
         const previousPositions = scrollPositions.filter(
             position => position < currentScroll - 5
         );
@@ -210,7 +194,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const previousPosition =
                 previousPositions[previousPositions.length - 1];
-
             track.scrollTo({
                 left: previousPosition,
                 behavior: 'smooth'
@@ -227,17 +210,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     track.addEventListener('scroll', updateDots, { passive: true });
-
     let resizeTimeout;
-
     window.addEventListener('resize', () => {
-
         clearTimeout(resizeTimeout);
-
         resizeTimeout = setTimeout(() => {
             setupDots();
         }, 150);
     });
-
     setTimeout(setupDots, 150);
 });
