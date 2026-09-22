@@ -63,6 +63,181 @@ if (heroSection) {
 const skillsSection = document.querySelector('#skills');
 
 if (skillsSection) {
-    // Usamos el aboutObserver que ya creamos en el paso anterior
     aboutObserver.observe(skillsSection);
 }
+
+// ================= ANIMACIÓN DE APARICIÓN DE LA SECCIÓN PROYECTOS ================= //
+
+const projectsSection = document.querySelector('#projects');
+
+if (projectsSection && typeof aboutObserver !== 'undefined') {
+    aboutObserver.observe(projectsSection);
+}
+
+// ================= CONTROL DEL CARRUSEL Y PUNTOS EXACTOS ================= //
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const track = document.querySelector('.carrusel-track');
+    const nextBtn = document.querySelector('.next-btn');
+    const prevBtn = document.querySelector('.prev-btn');
+    const indicatorsContainer = document.querySelector('.carousel-indicators');
+
+    if (!track) return;
+
+    let dots = [];
+    let scrollPositions = [];
+
+    // Calcula las posiciones reales de cada tarjeta
+    const getScrollPositions = () => {
+        const cards = Array.from(track.querySelectorAll('.project'));
+
+        if (cards.length === 0) return [];
+
+        const maxScroll = track.scrollWidth - track.clientWidth;
+
+        const positions = cards
+            .map(card => Math.min(card.offsetLeft - track.offsetLeft, maxScroll))
+            .filter((position, index, array) => {
+                return index === 0 || position !== array[index - 1];
+            });
+
+        return [...new Set(positions)];
+    };
+
+    // Crea los puntos según las posiciones reales del carrusel
+    const setupDots = () => {
+
+        if (!indicatorsContainer) return;
+
+        scrollPositions = getScrollPositions();
+
+        indicatorsContainer.innerHTML = '';
+        dots = [];
+
+        scrollPositions.forEach((position, index) => {
+
+            const dot = document.createElement('button');
+
+            dot.classList.add('dot');
+            dot.type = 'button';
+            dot.setAttribute('aria-label', `Ir al proyecto ${index + 1}`);
+
+            if (index === 0) {
+                dot.classList.add('active');
+                dot.setAttribute('aria-current', 'true');
+            }
+
+            dot.addEventListener('click', () => {
+                track.scrollTo({
+                    left: position,
+                    behavior: 'smooth'
+                });
+            });
+
+            indicatorsContainer.appendChild(dot);
+            dots.push(dot);
+        });
+
+        updateDots();
+    };
+
+    // Actualiza el punto activo según la posición real
+    const updateDots = () => {
+
+        if (dots.length === 0 || scrollPositions.length === 0) return;
+
+        const currentScroll = track.scrollLeft;
+
+        let activeIndex = 0;
+        let smallestDifference = Infinity;
+
+        scrollPositions.forEach((position, index) => {
+
+            const difference = Math.abs(currentScroll - position);
+
+            if (difference < smallestDifference) {
+                smallestDifference = difference;
+                activeIndex = index;
+            }
+        });
+
+        dots.forEach((dot, index) => {
+
+            const isActive = index === activeIndex;
+
+            dot.classList.toggle('active', isActive);
+
+            if (isActive) {
+                dot.setAttribute('aria-current', 'true');
+            } else {
+                dot.removeAttribute('aria-current');
+            }
+        });
+    };
+
+    // Busca la siguiente posición disponible
+    const goNext = () => {
+
+        if (scrollPositions.length === 0) return;
+
+        const currentScroll = track.scrollLeft;
+
+        const nextPosition = scrollPositions.find(
+            position => position > currentScroll + 5
+        );
+
+        if (nextPosition !== undefined) {
+            track.scrollTo({
+                left: nextPosition,
+                behavior: 'smooth'
+            });
+        }
+    };
+
+    // Busca la posición anterior disponible
+    const goPrevious = () => {
+
+        if (scrollPositions.length === 0) return;
+
+        const currentScroll = track.scrollLeft;
+
+        const previousPositions = scrollPositions.filter(
+            position => position < currentScroll - 5
+        );
+
+        if (previousPositions.length > 0) {
+
+            const previousPosition =
+                previousPositions[previousPositions.length - 1];
+
+            track.scrollTo({
+                left: previousPosition,
+                behavior: 'smooth'
+            });
+        }
+    };
+
+    if (nextBtn) {
+        nextBtn.addEventListener('click', goNext);
+    }
+
+    if (prevBtn) {
+        prevBtn.addEventListener('click', goPrevious);
+    }
+
+    track.addEventListener('scroll', updateDots, { passive: true });
+
+    let resizeTimeout;
+
+    window.addEventListener('resize', () => {
+
+        clearTimeout(resizeTimeout);
+
+        resizeTimeout = setTimeout(() => {
+            setupDots();
+        }, 150);
+    });
+
+    setTimeout(setupDots, 150);
+});
